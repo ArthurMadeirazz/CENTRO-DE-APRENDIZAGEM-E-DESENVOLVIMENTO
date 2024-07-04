@@ -18,162 +18,169 @@
     <!--FIM DAS FONTES-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--boostrap icons-->
-</head>
-
-<body >
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#inicio">
-                    <img src="imagens/books_97178.ico.ico" alt="Logo centro de Aprendizagem">
-                </a>
-            </div>
-
-
-            <nav class="menu-desktop"> <!--navegação do menu-->
-                <ul>
-                    <li><a href="index.html#inicio" target="_blank" rel="external">Início</a></li>
-                    <li><a href="index.html#SOBRE" target="_self">Equipe</a></li>
-                    <li><a href="index.html#ESPECIALIDADE" target="_self">Especialidades</a></li>
-                    <li><a href="https://maps.app.goo.gl/yjw859NUU7jQW5ZU7" target="_blank">Endereço</a></li>
-                    <li><a href="#Artigo" target="_self">Artigos</a></li>
-                </ul>
-            </nav>
-            <div class="flavia-contato">
-                <a href="https://wa.me/5531988123916" target="_blank">
-                    <button>Contato Flávia</button>
-
-                </a>
-
-            </div>
-            <div class="priscila-contato">
-                <a href="https://wa.me/5531995332666" target="_blank">
-                    <button>Contato Priscila</button>
-
-                </a>
-
-            </div>
-            
-    </header>
-    
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px 4%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+        header .logo img {
+            max-width: 100px;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+        }
+        header nav li {
+            display: inline;
+        }
+        header a {
+            color: #94b4c4;
+            text-decoration: none;
+            padding: 10px;
+            transition: .2s;
+        }
+        header a:hover {
+            color: #666;
+        }
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .contact-buttons a button {
+            padding: 10px 10px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 30px;
+            border: 0;
+            background-color: #94b4c4;
+            cursor: pointer;
+            transition: .2s;
+        }
+        .contact-buttons a button:hover {
+            box-shadow: 0px 0px 8px #94b4c4;
+            transform: scale(1.05);
+        }
         .container {
             display: flex;
-            align-items: flex-start;
+            flex-wrap: wrap;
             justify-content: space-between;
-            padding: 100px;
+            padding: 20px;
         }
-        .content {
-            max-width: 600px;
-        }
-        .image-container {
-            display: flex;
-            align-items: flex-start;
+        .content, .image-container {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
         }
         .image-container img {
-            max-height: 50%;
-            
+            max-width: 100%;
             border-radius: 50%;
         }
         h1 {
             font-size: 24px;
-            margin-bottom: 10px;
-            color:brown;
+            color: brown;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        p, ul {
+            font-size: 16px;
         }
         ul {
-            
-            padding: 0;
+            padding-left: 20px;
         }
-        ul li {
-            margin-bottom: 5px;
-            font-size: 20px;
-            margin-left: 40px;
-            font-weight: 300;
-
+        .segundo {
+            padding: 20px;
+            background-color: black;
+            color: white;
+            opacity: 0.8;
+            margin: 20px 0;
         }
-        h1{
-            margin-inline-start: 195px;
-            font-size: 35px;
-            
-            
+        .segundo h3 {
+            font-size: 40px;
         }
-        h2{
-            margin-inline-start: 160px;
-            font-size: 35px;
-        }
-        p{
-            font-size: 20px;
-            margin-left: 40px;
-        }
-        h3{
+        footer {
+            padding: 20px;
             text-align: center;
-           
-            color:#e7be08 ;
-            padding: 0 0 10px;
-  text-align: center;
-  
-  font-size: 50px;
-
+            background-color: #f1f1f1;
         }
-        /*cabeçalho*/
-        header {
-  padding: 40Px 4%;
-  background-color: #fff;
+        @media (max-width: 1024px) {
+            header, .container, .segundo, footer {
+                padding: 10px;
+            }
+            header nav ul {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .content, .image-container {
+                min-width: 100%;
+            }
+            .menu-desktop{
+                display: none;
 
-
-}
-
-header>.interface {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-}
-
-header a {
-  color: #94b4c4;
-  text-decoration: none;
-  display: inline-block;
-  transition: .2s;
-}
-header nav ul {
-  list-style: none;
-}
-
-header nav li {
-  display: inline-block;
-  /* display espaço em torno de um elemento em todos os lados. */
-  padding: 0 10px;
-}
-.segundo{
-  padding: 100px 200px;  
-  background-position: right center;
-  background-size: 100%;
-  box-shadow: inset;
-  background-attachment: fixed;
-  margin-top: 200px;
-}
-.segundo p{
-    color:antiquewhite;
-    font-weight: 700;
-}
-.segundo ul li{
-color: #fff;
-font-weight: 700;
-}
-.segundo{
-    background-color: black;
-  opacity: 0.8;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  
-}
-
+            }
+            #fms-menu{
+                display: block;
+            }
+        }
     </style>
 </head>
+
 <body>
+    <header>
+        <div class="logo">
+            <a href="index.html#inicio">
+                <img src="imagens/books_97178.ico.ico" alt="Logo centro de Aprendizagem">
+            </a>
+        </div>
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="index.html#inicio" target="_blank" rel="external">Início</a></li>
+                <li><a href="index.html#SOBRE" target="_self">Equipe</a></li>
+                <li><a href="index.html#ESPECIALIDADE" target="_self">Especialidades</a></li>
+                <li><a href="https://maps.app.goo.gl/yjw859NUU7jQW5ZU7" target="_blank">Endereço</a></li>
+                <li><a href="#Artigo" target="_self">Artigos</a></li>
+            </ul>
+        </nav>
+        <div class="contact-buttons">
+            <a href="https://wa.me/5531988123916" target="_blank" class="flavia-contato"><button>Contato Flávia</button></a>
+            <a href="https://wa.me/5531995332666" target="_blank" class="priscila-contato"><button>Contato Priscila</button></a>
+        </div>
+        <div class="fms-abrir-menu" id="fms-menu" style="display: none;">
+            <i class="bi bi-list"></i>
+
+        </div><!--fms-abrir-menu-->
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="fms-fechar" >
+                <i class="bi bi-x-lg" style="color:#e7be08; font-size: 30px;"></i>
+
+            </div><!--fms-fechar-->
+            <nav> <!--navegação do menu-->
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#SOBRE">Equipe</a></li>
+                    <li><a href="#ESPECIALIDADE">Especialidades</a></li>
+                    <li><a href="https://maps.app.goo.gl/QTrUaGkXvA3QN1qZ7" target="_blank">Endereço</a></li>
+                    <li><a href="https://wa.me/5531988123916" target="_blank">Contato</a></li>
+                </ul>
+            </nav>
+        </div><!--menu-mobile-->
+        <div class="overlay-menu" id="overlay-menu">
+        </div>
+    </header>
+
     <div class="container">
         <div class="content">
             <h1>Sobre Nós</h1>
@@ -186,58 +193,33 @@ font-weight: 700;
                 <li>Transtornos do Neurodesenvolvimento (TEA, TDAH, DI, Dislexia, Discalculia, dentre outros).</li>
                 <li>Dificuldade de aprendizagem</li>
                 <li>Orientação a Pais e Educadores</li>
-
             </ul>
-            
         </div>
         <div class="image-container">
             <img src="imagens/flavia-e-priscila.png" alt="Flávia Abrahão">
         </div>
-        
     </div>
-    <div class="segundo" style="background-image: url('imagens/book\ 1.jpg');">
-        <h3 class="dois">Priscila Alves</h3>
-            <p >Sou Priscila Alves, pedagoga, especialista em neuropsicopedagogia clínica e institucional, com ênfase em Superdotação/Altas Habilidades e em TDAH, e sou professora de música.
-                Atualmente, graduanda na UEMG em Educação Musical Escolar.
-                </p>
-                <p>
-                    Ofereço apoio neuropsicopedagógico personalizado a crianças e adolescentes, com foco nas dificuldades e potenciais, buscando o seu desenvolvimento pleno pedagógico, social e emocional.Meus serviços incluem:</p>
-                    <ul>
-                        <li>Avaliação e Intervenção Neuropsicopedagógica;
-                        </li>
-                        <li>Transtornos do Neurodesenvolvimento;
-                        </li>
-                        <li>Dificuldades de aprendizagem;
-                        </li>
-                        <li>Orientação a Pais e Educadores;
-                        </li>
-                        <li>Acompanhamento escolar individual;
-                        </li>
-                        <li>Aulas de Violão e Teclado.
-                        </li>
-        
-                    </ul>
 
+    <div class="segundo">
+        <h3>Priscila Alves</h3>
+        <p>Sou Priscila Alves, pedagoga, especialista em neuropsicopedagogia clínica e institucional, com ênfase em Superdotação/Altas Habilidades e em TDAH, e sou professora de música. Atualmente, graduanda na UEMG em Educação Musical Escolar.</p>
+        <p>Ofereço apoio neuropsicopedagógico personalizado a crianças e adolescentes, com foco nas dificuldades e potenciais, buscando o seu desenvolvimento pleno pedagógico, social e emocional. Meus serviços incluem:</p>
+        <ul>
+            <li>Avaliação e Intervenção Neuropsicopedagógica;</li>
+            <li>Transtornos do Neurodesenvolvimento;</li>
+            <li>Dificuldades de aprendizagem;</li>
+            <li>Orientação a Pais e Educadores;</li>
+            <li>Acompanhamento escolar individual;</li>
+            <li>Aulas de Violão e Teclado.</li>
+        </ul>
     </div>
-    <footer style="padding: 100px;">
-        <div class="interface">
-            <div class="linha-up">
-                <div class="flex">
-                    
-                </div>
-            </div><!--linha-up-->
 
-            <div class="linha-up borda">
-                <p><i class="bi bi-envelope-fill"></i> <a
-                        href="mailto:flaviapriscilaclinica@gmail.com" style="color: black;">flaviapriscilaclinica@gmail.com</a></p>
-
-
-            </div><!--linha-up-->
-            <div class="termos"></div>
-            <p style="color:black; text-align:center;">&copy; 2024 Centro de Aprendizagem e Desenvolvimento - Todos os direitos reservados.
-            </p>
-
-        </div><!--interface-->
+    <footer>
+        <div>
+            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:flaviapriscilaclinica@gmail.com" style="color: black;">flaviapriscilaclinica@gmail.com</a></p>
+            <p>&copy; 2024 Centro de Aprendizagem e Desenvolvimento - Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
+
 </html>
